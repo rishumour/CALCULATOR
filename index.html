@@ -3,36 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULATOR BY RISHUMOUR</title>
+    <title>Premium Calculator</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utils.css">
 </head>
-
 <body>
-    <h1 class="text-center">CALCULATOR BY RISHUMOUR</h1>
-    <div class="container flex flex-col items-center mx-auto m-w-20">
-        <div class="row">
-            <input type="text" class="input">
+    <div class="calculator-container">
+        <!-- Brand/Header -->
+        <div class="calculator-header">
+            <span class="brand-title">CALCULATOR by RISHUMOUR</span>
+            <div class="brand-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
         </div>
-        <div class="row">
-            <button class="button">7</button>
-            <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button">X</button>
+
+        <!-- Displays -->
+        <div class="display-container">
+            <div class="display-history" id="display-history"></div>
+            <div class="display-current" id="display-current">0</div>
         </div>
-        <div class="row">
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button">X</button>
-        </div>
-        <div class="row">
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button">X</button>
+
+        <!-- Buttons Grid -->
+        <div class="buttons-grid">
+            <!-- Row 1 -->
+            <button class="btn btn-action" data-val="AC">AC</button>
+            <button class="btn btn-action" data-val="DEL">⌫</button>
+            <button class="btn btn-action" data-val="%">%</button>
+            <button class="btn btn-operator" data-val="/">÷</button>
+
+            <!-- Row 2 -->
+            <button class="btn btn-num" data-val="7">7</button>
+            <button class="btn btn-num" data-val="8">8</button>
+            <button class="btn btn-num" data-val="9">9</button>
+            <button class="btn btn-operator" data-val="*">×</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-num" data-val="4">4</button>
+            <button class="btn btn-num" data-val="5">5</button>
+            <button class="btn btn-num" data-val="6">6</button>
+            <button class="btn btn-operator" data-val="-">−</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-num" data-val="1">1</button>
+            <button class="btn btn-num" data-val="2">2</button>
+            <button class="btn btn-num" data-val="3">3</button>
+            <button class="btn btn-operator" data-val="+">+</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-action" data-val="+/-">±</button>
+            <button class="btn btn-num" data-val="0">0</button>
+            <button class="btn btn-num" data-val=".">.</button>
+            <button class="btn btn-equals" data-val="=">=</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
